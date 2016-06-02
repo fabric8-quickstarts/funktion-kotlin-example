@@ -11,7 +11,7 @@ This example shows how easy it is to develop a [funktion](https://github.com/fab
 The source code consists of:
 
 * [funktion.yml](funktion.yml) to define the trigger URL (in this case HTTP)
-* [main() function in kotlin](src/main/kotlin/io/fabric8/funktion/example/Main.kt#L23-L25) to process incoming events
+* [main() function in kotlin](src/main/kotlin/io/fabric8/funktion/example/Main.kt#L22-L24) to process incoming events
 
 You can then run your funktion locally via:
 
