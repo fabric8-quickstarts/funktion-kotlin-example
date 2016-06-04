@@ -19,7 +19,10 @@ package io.fabric8.funktion.example
 import org.apache.camel.Header
 
 class Main {
-    fun main(body: String, @Header("name") name: String): String {
-        return "Hello ${name}! I got payload `${body}` and I am on host: ${System.getenv("HOSTNAME")} and I am kotlin!"
+    fun main(body: String?, @Header("name") name: String?): String {
+        if (name != null)
+            return "Hello ${name}! I got payload `${body}` and I am on host: ${System.getenv("HOSTNAME")} and I am kotlin!"
+        else
+            return "What is your name? Specify a name using ?name=foo as query parameter. I am on host: ${System.getenv("HOSTNAME")} and I am kotlin!"
     }
 }
